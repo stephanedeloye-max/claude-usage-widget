@@ -33,7 +33,7 @@ cur = (s.get("statusLine") or {}).get("command")
 if cur and cur != collector:
     open(data + "/previous-statusline.txt", "w").write(cur)   # chained by the collector
 s["statusLine"] = {"type": "command", "command": collector}
-hook = {"type": "command", "command": "pkill -USR1 ClaudeUsageWidget; true"}
+hook = {"type": "command", "command": "pkill -USR1 ClaudeUsageWidget || launchctl kickstart gui/$(id -u)/com.claudeusagewidget; true"}
 for ev in ("SessionStart", "SessionEnd"):
     groups = s.setdefault("hooks", {}).setdefault(ev, [])
     if not any(h.get("command") == hook["command"] for g in groups for h in g.get("hooks", [])):

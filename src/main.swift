@@ -184,7 +184,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         sz.submenu = ss; m.addItem(sz)
         m.addItem(.separator())
         item(win.isVisible ? T("Masquer le widget", "Hide widget") : T("Afficher le widget", "Show widget"), #selector(toggleShow))
-        item(T("Quitter", "Quit"), #selector(quitApp))
         return m
     }
     @objc func doRefresh() { refresh() }
