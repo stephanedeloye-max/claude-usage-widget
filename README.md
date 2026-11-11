@@ -17,14 +17,14 @@ A tiny floating macOS widget that shows your Claude Code usage: the 5-hour sessi
 Requires macOS, python3 and the Xcode Command Line Tools (`xcode-select --install`).
 
 ```bash
-./install.sh
+bash install.sh
 ```
 
 Then open a Claude Code session. The widget refreshes when a session opens or closes, and whenever Claude Code updates its status line.
 
 ## Uninstall
 ```bash
-./uninstall.sh
+bash uninstall.sh
 ```
 
 ## How it works
